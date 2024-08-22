@@ -71,14 +71,15 @@ public class EmpleadoController {
 					 ,@RequestParam("estado_civil")@Nullable String estado_civil
 					 ,@RequestParam("num_cargas_familiares")@Nullable Integer num_cargas_familiares
 					 ,@RequestParam("estado_empleado")@Nullable Integer estado_empleado
+					 ,@RequestParam("foto")@Nullable String foto
 					 ,Model model
 					) {
 			if(idEmpleado == null) {
-				Empleado empleado =new Empleado(0,idciudad,cedula_ruc,nombre,apellido,fecha_nacimiento,edad,genero,nacionalidad,direccion,telefono,correo,codigo_postal,estado_civil,num_cargas_familiares,estado_empleado);
+				Empleado empleado =new Empleado(0,idciudad,cedula_ruc,nombre,apellido,fecha_nacimiento,edad,genero,nacionalidad,direccion,telefono,correo,codigo_postal,estado_civil,num_cargas_familiares,estado_empleado,foto);
 				empleadoDAO.add(empleado);
 				
 			}else {
-				Empleado empleado =new Empleado(0,idciudad,cedula_ruc,nombre,apellido,fecha_nacimiento,edad,genero,nacionalidad,direccion,telefono,correo,codigo_postal,estado_civil,num_cargas_familiares,estado_empleado);
+				Empleado empleado =new Empleado(0,idciudad,cedula_ruc,nombre,apellido,fecha_nacimiento,edad,genero,nacionalidad,direccion,telefono,correo,codigo_postal,estado_civil,num_cargas_familiares,estado_empleado,foto);
 				empleadoDAO.up(empleado);
 				
 			}

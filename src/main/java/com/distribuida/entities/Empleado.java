@@ -57,7 +57,8 @@ public class Empleado {
 	private int numCargasFamiliares;
 	@Column(name="estado_empleado")
 	private int estadoEmpleado;
-	
+	@Column(name="foto")
+	private String foto;
 	
 	
 //constructores
@@ -67,11 +68,10 @@ public class Empleado {
    }
 
 
-
 public Empleado(int idEmpleado, int idCiudad, String cedulaRuc, String nombre, String apellido, Date fechaNacimiento,
 		int edad, String genero, String nacionalidad, String direccion, String telefono, String correo,
-		String codigoPostal, String estadoCivil, int numCargasFamiliares, int estadoEmpleado) {
-	super();
+		String codigoPostal, String estadoCivil, int numCargasFamiliares, int estadoEmpleado, String foto) {
+	
 	this.idEmpleado = idEmpleado;
 	this.idCiudad = idCiudad;
 	this.cedulaRuc = cedulaRuc;
@@ -88,8 +88,8 @@ public Empleado(int idEmpleado, int idCiudad, String cedulaRuc, String nombre, S
 	this.estadoCivil = estadoCivil;
 	this.numCargasFamiliares = numCargasFamiliares;
 	this.estadoEmpleado = estadoEmpleado;
+	this.foto = foto;
 }
-
 
 
 public int getIdEmpleado() {
@@ -97,11 +97,9 @@ public int getIdEmpleado() {
 }
 
 
-
 public void setIdEmpleado(int idEmpleado) {
 	this.idEmpleado = idEmpleado;
 }
-
 
 
 public int getIdCiudad() {
@@ -109,11 +107,9 @@ public int getIdCiudad() {
 }
 
 
-
 public void setIdCiudad(int idCiudad) {
 	this.idCiudad = idCiudad;
 }
-
 
 
 public String getCedulaRuc() {
@@ -121,11 +117,9 @@ public String getCedulaRuc() {
 }
 
 
-
 public void setCedulaRuc(String cedulaRuc) {
 	this.cedulaRuc = cedulaRuc;
 }
-
 
 
 public String getNombre() {
@@ -133,11 +127,9 @@ public String getNombre() {
 }
 
 
-
 public void setNombre(String nombre) {
 	this.nombre = nombre;
 }
-
 
 
 public String getApellido() {
@@ -145,11 +137,9 @@ public String getApellido() {
 }
 
 
-
 public void setApellido(String apellido) {
 	this.apellido = apellido;
 }
-
 
 
 public Date getFechaNacimiento() {
@@ -157,11 +147,9 @@ public Date getFechaNacimiento() {
 }
 
 
-
 public void setFechaNacimiento(Date fechaNacimiento) {
 	this.fechaNacimiento = fechaNacimiento;
 }
-
 
 
 public int getEdad() {
@@ -169,11 +157,9 @@ public int getEdad() {
 }
 
 
-
 public void setEdad(int edad) {
 	this.edad = edad;
 }
-
 
 
 public String getGenero() {
@@ -181,11 +167,9 @@ public String getGenero() {
 }
 
 
-
 public void setGenero(String genero) {
 	this.genero = genero;
 }
-
 
 
 public String getNacionalidad() {
@@ -193,11 +177,9 @@ public String getNacionalidad() {
 }
 
 
-
 public void setNacionalidad(String nacionalidad) {
 	this.nacionalidad = nacionalidad;
 }
-
 
 
 public String getDireccion() {
@@ -205,11 +187,9 @@ public String getDireccion() {
 }
 
 
-
 public void setDireccion(String direccion) {
 	this.direccion = direccion;
 }
-
 
 
 public String getTelefono() {
@@ -217,11 +197,9 @@ public String getTelefono() {
 }
 
 
-
 public void setTelefono(String telefono) {
 	this.telefono = telefono;
 }
-
 
 
 public String getCorreo() {
@@ -229,11 +207,9 @@ public String getCorreo() {
 }
 
 
-
 public void setCorreo(String correo) {
 	this.correo = correo;
 }
-
 
 
 public String getCodigoPostal() {
@@ -241,11 +217,9 @@ public String getCodigoPostal() {
 }
 
 
-
 public void setCodigoPostal(String codigoPostal) {
 	this.codigoPostal = codigoPostal;
 }
-
 
 
 public String getEstadoCivil() {
@@ -253,11 +227,9 @@ public String getEstadoCivil() {
 }
 
 
-
 public void setEstadoCivil(String estadoCivil) {
 	this.estadoCivil = estadoCivil;
 }
-
 
 
 public int getNumCargasFamiliares() {
@@ -265,17 +237,14 @@ public int getNumCargasFamiliares() {
 }
 
 
-
 public void setNumCargasFamiliares(int numCargasFamiliares) {
 	this.numCargasFamiliares = numCargasFamiliares;
 }
 
 
-
 public int getEstadoEmpleado() {
 	return estadoEmpleado;
 }
-
 
 
 public void setEstadoEmpleado(int estadoEmpleado) {
@@ -284,14 +253,28 @@ public void setEstadoEmpleado(int estadoEmpleado) {
 
 
 
+
+public String getFoto() {
+	return foto;
+}
+
+
+public void setFoto(String foto) {
+	this.foto = foto;
+}
+
+
 @Override
 public String toString() {
 	return "Empleado [idEmpleado=" + idEmpleado + ", idCiudad=" + idCiudad + ", cedulaRuc=" + cedulaRuc + ", nombre="
 			+ nombre + ", apellido=" + apellido + ", fechaNacimiento=" + fechaNacimiento + ", edad=" + edad
 			+ ", genero=" + genero + ", nacionalidad=" + nacionalidad + ", direccion=" + direccion + ", telefono="
 			+ telefono + ", correo=" + correo + ", codigoPostal=" + codigoPostal + ", estadoCivil=" + estadoCivil
-			+ ", numCargasFamiliares=" + numCargasFamiliares + ", estadoEmpleado=" + estadoEmpleado + "]";
+			+ ", numCargasFamiliares=" + numCargasFamiliares + ", estadoEmpleado=" + estadoEmpleado + ", foto=" + foto
+			+ "]";
 }
+
+
 
 
 

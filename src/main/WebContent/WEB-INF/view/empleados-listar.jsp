@@ -33,6 +33,7 @@
 				<th>estadoCivil</th>
 				<th>numCargasFamiliares</th>
 				<th>estadoEmpleado</th>
+				<th>foto</th>
 				<th>Acciones</th>
 				</tr>
 			</thead>
@@ -55,6 +56,9 @@
 					<td>${item.estadoCivil}</td>
 					<td>${item.numCargasFamiliares}</td>
 					<td>${item.estadoEmpleado}</td>
+					<td>${item.foto}</td>
+					
+					
 					<td>
 					<button onclick="window.location.href='/ismac-recursos-web-nocturnov2/empleados/findOne?idEmpleado=${item.idEmpleado}&opcion=1'; return false;">
 					Actualizar
